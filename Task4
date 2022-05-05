@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    system("chcp 65001");
+    int decimal=0, a=0, t=0, d=1;
+    cout << "Введите число в десятичной форме: ";
+    cin >> decimal;
+    a = decimal;
+    while(decimal)
+    {
+        t += (decimal%2)*d;
+        decimal = decimal/2;
+        d = d*10;
+    }
+    cout << "Число " << a << " в двоичной форме = " << t;
+    return 0;
+}
